@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="main-container">
+      <div class="container">
+        <header>
+          <h2>Expense Tracker</h2>
+          <button class="btn" id="show-expense-btn" onclick="handleShowForm()">
+            Add Expense
+          </button>
+        </header>
+        <div class="expense-form" id="form-container">
+          <h3 class="header-form">Add Expense</h3>
+          <button class="close-form" onclick="handleCloseForm()">x</button>
+          <form onsubmit="handleFormSubmit(event)">
+            <input
+              type="text"
+              name="expenseName"
+              id="expense-text-input"
+              placeholder="Expense name"
+            />
+            <input
+              type="number"
+              name="expensePrice"
+              id="expense-text-number"
+              placeholder="Expense price"
+            />
+            <input type="submit" value="Add Expense" class="expense-submit" />
+          </form>
+        </div>
+        <div id="show-data"></div>
+        <footer id="show-total"></footer>
+      </div>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
